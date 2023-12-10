@@ -5,15 +5,20 @@ pip install num2words numpy torch pandas
 google colab環境配置：見models中相關程式Environment部分
 
 數據處理流程說明：
+
 數據處理部分
 1.使用data_processing/data_processing_task1_1127.py 分別生成任務1所需的train/test/val data。結果如data文件夾中所示。
 2.使用data_processing/data_processing_task2.py 分別生成任務2所需的train/test data。結果如data文件夾中所示。
+
 任務1部分
 3.使用models中的相關模型，通過google colab完成task1中相關的模型訓練，並得到對目標資料集val data的預測文件prediction_xxxxxxxxxx.txt.
 4.通過data_processing/annotation.py文件對得的單個或多個模型的prediction_xxxxxxxxxx.txt預測結果文件進行整理，得到符合answer_xxxxxxxxxx.txt的文件。
 5.通過data_processing/evaluation.py分析當前結果的指標。
+
 任務2部分
 6.使用models中的相關模型，通過google colab完成task2中相關的模型訓練
 7.將得到的answer_xxxxxxxxxx.txt文件通過任務2的模型進行時間標準化結果的預測，得到answer_xxxxxxxxxx_norm.txt文件。
 8.將得到的answer_xxxxxxxxxx_norm.txt通過data_processing/normalization.py進行時間標準化的正則表達式糾正，得到answer_xxxxxxxxxx_norm_clean.txt。
+
+提交結果
 9.講得到answer_xxxxxxxxxx_norm_clean.txt以符合要求的命名方式提交至codalab。
